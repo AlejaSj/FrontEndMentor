@@ -1,0 +1,42 @@
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #6a6f81;
+  background-color: hsl(185, 75%, 39%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bgTop{
+  position:fixed ;
+  left: -15%;
+  top: -60%;
+  
+  z-index: -1;
+}
+
+.bgBottom{
+  position:fixed ;
+  left: 50%;
+  top: 55%;
+  z-index: -1;
+}
+
+.profile-img {
+  width: 6rem;  
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  top: calc(20.5rem - 3rem); 
+  left: 50%;
+  transform: translateX(-50%);
+}
