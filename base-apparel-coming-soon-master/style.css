@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ff: "Josefin Sans", sans serif;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
+
+  --fs: 16px;
+
+  --clr-desaturated-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 93%, 68%);
+  --clr-drk-grayish-red: hsl(0, 6%, 24%);
+
+  --gradient-normal: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  --gradient-active: linear-gradient(
+    135deg,
+    from hsl(0, 80%, 86%),
+    to hsl(0, 74%, 74%)
+  );
+}
+
+body {
+  font-family: var(--ff);
+}
+
+header {
+  padding: 20px;
+}
+header img {
+  width: 25%;
+}
+
+section.hero {
+  width: 100%;
+}
+
+section.hero img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+section.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+}
+
+section.coming-soon h1 {
+  font-size: 3em;
+  color: var(--clr-desaturated-red);
+  font-weight: var(--fw-light);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+section.coming-soon strong {
+  color: var(--clr-drk-grayish-red);
+  font-weight: var(--fw-normal);
+}
+
+section.coming-soon p {
+  color: var(--clr-desaturated-red);
+  word-spacing: 0.1em;
+  line-height: 1.4em;
+}
+
+section.forms form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+section.forms input.email {
+  width: 70%;
+  padding: 14px;
+  border-radius: 26px;
+  border: 1px solid var(--clr-desaturated-red);
+  outline: none;
+  opacity: 50%;
+  color: var(--clr-soft-red);
+}
+
+section.forms input.email::placeholder {
+  color: var(--clr-desaturated-red);
+  padding: 10px;
+  word-spacing: 0.1em;
+}
+
+section.forms button.submit-button {
+  position: absolute;
+  right: 58px;
+  padding: 14px;
+  border-radius: 26px;
+  z-index: 1;
+  border: none;
+  width: 14%;
+  height: 100%;
+  background-image: var(--gradient-normal);
+  box-shadow: 2px 5px 13px hsl(0, 74%, 74%);
+}
+
+section.forms button.submit-button img {
+  align-self: center;
+  justify-self: center;
+}
+
+.desktop-img {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr;
+  }
+
+  .desktop-img {
+    display: block;
+    grid-column: 2;
+    grid-row: span 2;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  section.hero img {
+    display: none;
+  }
+
+  header {
+    grid-row: 1;
+  }
+
+  main {
+    grid-row: 2;
+    align-items: center;
+  }
+
+  header,
+  main {
+    grid-column: 1;
+  }
+
+  header {
+    padding: 60px;
+    padding-left: 190px;
+    padding-bottom: 0;
+    margin-bottom: 10rem;
+  }
+
+  header img {
+    width: 20%;
+  }
+
+  section.coming-soon {
+    text-align: left;
+    padding: 0;
+    padding-left: 190px;
+  }
+
+  section.coming-soon h1 {
+    min-width: 100%;
+    font-size: 4em;
+  }
+  section.coming-soon p {
+    padding-right: 17rem;
+    font-size: 1.1em;
+    margin-bottom: 3rem;
+  }
+
+  section.forms form {
+    padding-left: 190px;
+    justify-content: left;
+  }
+
+  section.forms input.email {
+    width: 65%;
+    padding: 15px;
+    position: relative;
+  }
+  section.forms button.submit-button {
+    position: absolute;
+    right: 25%;
+    padding: 15px;
+    border-radius: 26px;
+    z-index: 1;
+    border: none;
+    width: 10%;
+    height: 100%;
+    background-image: var(--gradient-normal);
+    box-shadow: 2px 5px 13px hsl(0, 74%, 74%);
+    transition: transform 0.3s ease;
+  }
+  section.forms button.submit-button:hover {
+    transform: scale(1.1);
+    opacity: 90%;
+  }
+}
