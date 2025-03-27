@@ -1,0 +1,134 @@
+#root {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.category{
+  cursor:pointer;
+  padding-block: calc(var(--spacing) * 2);
+  border-radius: var(--radius-3xl);
+  padding-inline: calc(var(--spacing) * 4);
+  
+ 
+  font-weight: 500;
+}
+.category:hover{
+  color: #545969;
+}
+
+.selected:hover{
+  background-color: hsl(3, 86%, 64%);
+  
+}
+
+.light{
+  background-color: white;
+  color: #2f364b;
+}
+
+.dark{
+  background-color: #545969;
+}
+
+.dark:hover{
+  
+    color: #c9bfbf;
+  
+}
+
+.selected{
+  color: white;
+  background-color: hsl(3, 77%, 44%);
+}
+.selected:hover{
+  color: white;}
+
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+.card-img{
+  min-width: 4rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #f25c54;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
